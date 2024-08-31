@@ -1,0 +1,375 @@
+{
+  "ccraft-main": {
+    "prefix": "ccraft-main",
+    "body": [
+      "#include <stdio.h>",
+      "",
+      "int main() {",
+      "    ${1:/* Your code here */}",
+      "    return 0;",
+      "}"
+    ],
+    "description": "Main function template"
+  },
+  "ccraft-for-loop": {
+    "prefix": "ccraft-for-loop",
+    "body": [
+      "for (int ${1:i} = 0; $1 < ${2:10}; $1++) {",
+      "    ${3:// code here}",
+      "}"
+    ],
+    "description": "Basic for loop"
+  },
+  "ccraft-if-else": {
+    "prefix": "ccraft-if-else",
+    "body": [
+      "if (${1:condition}) {",
+      "    ${2:// code here}",
+      "} else {",
+      "    ${3:// code here}",
+      "}"
+    ],
+    "description": "If-Else statement"
+  },
+  "ccraft-printf": {
+    "prefix": "ccraft-printf",
+    "body": [
+      "printf(\"${1:format string}\", ${2:variables});"
+    ],
+    "description": "Printf function"
+  },
+  "ccraft-scanf": {
+    "prefix": "ccraft-scanf",
+    "body": [
+      "scanf(\"${1:format string}\", ${2:&variables});"
+    ],
+    "description": "Scanf function"
+  },
+  "ccraft-while-loop": {
+    "prefix": "ccraft-while-loop",
+    "body": [
+      "while (${1:condition}) {",
+      "    ${2:// code here}",
+      "}"
+    ],
+    "description": "While loop"
+  },
+  "ccraft-struct": {
+    "prefix": "ccraft-struct",
+    "body": [
+      "typedef struct {",
+      "    ${1:int field1;}",
+      "    ${2:char field2;}",
+      "    ${3:float field3;}",
+      "} ${4:StructName};"
+    ],
+    "description": "Structure definition"
+  },
+  "ccraft-typedef": {
+    "prefix": "ccraft-typedef",
+    "body": [
+      "typedef ${1:existing_type} ${2:new_type};"
+    ],
+    "description": "Typedef statement"
+  },
+  "ccraft-pointer": {
+    "prefix": "ccraft-pointer",
+    "body": [
+      "${1:type}* ${2:ptr} = ${3:NULL};"
+    ],
+    "description": "Pointer declaration"
+  },
+  "ccraft-malloc": {
+    "prefix": "ccraft-malloc",
+    "body": [
+      "${1:type}* ${2:ptr} = (${1:type}*) malloc(${3:size} * sizeof(${1:type}));",
+      "if (${2:ptr} == NULL) {",
+      "    ${4:/* handle memory allocation failure */}",
+      "}"
+    ],
+    "description": "Memory allocation using malloc"
+  },
+  "ccraft-free": {
+    "prefix": "ccraft-free",
+    "body": [
+      "free(${1:ptr});",
+      "${1:ptr} = NULL;"
+    ],
+    "description": "Memory deallocation using free"
+  },
+  "ccraft-fopen": {
+    "prefix": "ccraft-fopen",
+    "body": [
+      "FILE* ${1:file} = fopen(\"${2:filename}\", \"${3:mode}\");",
+      "if (${1:file} == NULL) {",
+      "    ${4:/* handle file opening failure */}",
+      "}"
+    ],
+    "description": "File open using fopen"
+  },
+  "ccraft-fclose": {
+    "prefix": "ccraft-fclose",
+    "body": [
+      "fclose(${1:file});"
+    ],
+    "description": "File close using fclose"
+  },
+  "ccraft-fwrite": {
+    "prefix": "ccraft-fwrite",
+    "body": [
+      "fwrite(${1:buffer}, sizeof(${2:buffer[0]}), ${3:size}, ${4:file});"
+    ],
+    "description": "File write using fwrite"
+  },
+  "ccraft-fread": {
+    "prefix": "ccraft-fread",
+    "body": [
+      "fread(${1:buffer}, sizeof(${2:buffer[0]}), ${3:size}, ${4:file});"
+    ],
+    "description": "File read using fread"
+  },
+  "ccraft-switch-case": {
+    "prefix": "ccraft-switch-case",
+    "body": [
+      "switch (${1:variable}) {",
+      "    case ${2:CONSTANT_1}:",
+      "        ${3:// code for case 1}",
+      "        break;",
+      "    case ${4:CONSTANT_2}:",
+      "        ${5:// code for case 2}",
+      "        break;",
+      "    default:",
+      "        ${6:// default case code}",
+      "}"
+    ],
+    "description": "Switch-case statement"
+  },
+  "ccraft-do-while-loop": {
+    "prefix": "ccraft-do-while-loop",
+    "body": [
+      "do {",
+      "    ${1:// code here}",
+      "} while (${2:condition});"
+    ],
+    "description": "Do-while loop"
+  },
+  "ccraft-define": {
+    "prefix": "ccraft-define",
+    "body": [
+      "#define ${1:NAME} ${2:value}"
+    ],
+    "description": "Define a macro"
+  },
+  "ccraft-include-guard": {
+    "prefix": "ccraft-include-guard",
+    "body": [
+      "#ifndef ${1:HEADER_NAME}",
+      "#define ${1:HEADER_NAME}",
+      "",
+      "${2:/* header contents */}",
+      "",
+      "#endif // ${1:HEADER_NAME}"
+    ],
+    "description": "Include guard for header files"
+  },
+  "ccraft-inline-function": {
+    "prefix": "ccraft-inline-function",
+    "body": [
+      "inline ${1:return_type} ${2:function_name}(${3:arguments}) {",
+      "    ${4:// function body}",
+      "}"
+    ],
+    "description": "Inline function definition"
+  },
+  "ccraft-assert": {
+    "prefix": "ccraft-assert",
+    "body": [
+      "#include <assert.h>",
+      "",
+      "assert(${1:condition});"
+    ],
+    "description": "Assert statement"
+  },
+  "ccraft-cpp-main": {
+    "prefix": "ccraft-cpp-main",
+    "body": [
+      "#include <iostream>",
+      "",
+      "int main() {",
+      "    ${1:std::cout << \"Hello, World!\" << std::endl;}",
+      "    return 0;",
+      "}"
+    ],
+    "description": "Main function template"
+  },
+  "ccraft-cpp-for-loop": {
+    "prefix": "ccraft-cpp-for-loop",
+    "body": [
+      "for (int ${1:i} = 0; $1 < ${2:10}; $1++) {",
+      "    ${3:// code here}",
+      "}"
+    ],
+    "description": "Basic for loop"
+  },
+  "ccraft-cpp-if-else": {
+    "prefix": "ccraft-cpp-if-else",
+    "body": [
+      "if (${1:condition}) {",
+      "    ${2:// code here}",
+      "} else {",
+      "    ${3:// code here}",
+      "}"
+    ],
+    "description": "If-Else statement"
+  },
+  "ccraft-cpp-unique_ptr": {
+    "prefix": "ccraft-cpp-unique_ptr",
+    "body": [
+      "#include <memory>",
+      "",
+      "std::unique_ptr<${1:Type}> ${2:ptr} = std::make_unique<${1:Type}>(${3:args});"
+    ],
+    "description": "std::unique_ptr (C++11 and later)"
+  },
+  "ccraft-cpp-vector": {
+    "prefix": "ccraft-cpp-vector",
+    "body": [
+      "#include <vector>",
+      "",
+      "std::vector<${1:Type}> ${2:vec};"
+    ],
+    "description": "std::vector declaration"
+  },
+  "ccraft-cpp-class": {
+    "prefix": "ccraft-cpp-class",
+    "body": [
+      "class ${1:ClassName} {",
+      "public:",
+      "    ${1:ClassName}();",
+      "    ~${1:ClassName}();",
+      "",
+      "private:",
+      "    ${2:int memberVariable;}",
+      "};"
+    ],
+    "description": "Basic class definition"
+  },
+  "ccraft-cpp-smart-ptr": {
+    "prefix": "ccraft-cpp-smart-ptr",
+    "body": [
+      "#include <memory>",
+      "",
+      "std::unique_ptr<${1:Type}> ${2:ptr} = std::make_unique<${1:Type}>(${3:args});",
+      "// or",
+      "std::shared_ptr<${1:Type}> ${2:ptr} = std::make_shared<${1:Type}>(${3:args});"
+    ],
+    "description": "Smart pointer (std::unique_ptr and std::shared_ptr)"
+  },
+  "ccraft-cpp-concept": {
+    "prefix": "ccraft-cpp-concept",
+    "body": [
+      "template <typename T>",
+      "concept ${1:ConceptName} = ${2:requires { /* requirements */ };};"
+    ],
+    "description": "Define a concept (C++20 and later)"
+  },
+  "ccraft-cpp-constexpr": {
+    "prefix": "ccraft-cpp-constexpr",
+    "body": [
+      "constexpr ${1:return_type} ${2:function_name}(${3:parameters}) {",
+      "    return ${4:expression};",
+      "}"
+    ],
+    "description": "Constexpr function"
+  },
+  "ccraft-cpp-range-for": {
+    "prefix": "ccraft-cpp-range-for",
+    "body": [
+      "for (auto& ${1:element} : ${2:container}) {",
+      "    ${3:// code here}",
+      "}"
+    ],
+    "description": "Range-based for loop (C++11 and later)"
+  },
+  "ccraft-cpp-ranges": {
+    "prefix": "ccraft-cpp-ranges",
+    "body": [
+      "#include <ranges>",
+      "",
+      "auto ${1:result} = ${2:container} | std::views::${3:filter}(${4:condition}) | std::views::${5:transform}(${6:operation});"
+    ],
+    "description": "Using ranges (C++20 and later)"
+  },
+  "ccraft-cpp-lambda": {
+    "prefix": "ccraft-cpp-lambda",
+    "body": [
+      "auto ${1:lambda_name} = [](${2:parameters}) {",
+      "    ${3:// code here}",
+      "};"
+    ],
+    "description": "Lambda expression (C++11 and later)"
+  },
+  "ccraft-cpp-try-catch": {
+    "prefix": "ccraft-cpp-try-catch",
+    "body": [
+      "try {",
+      "    ${1:// code here}",
+      "} catch (${2:const std::exception& e}) {",
+      "    std::cerr << e.what() << std::endl;",
+      "}"
+    ],
+    "description": "Try-catch block"
+  },
+  "ccraft-cpp-std-thread": {
+    "prefix": "ccraft-cpp-std-thread",
+    "body": [
+      "#include <thread>",
+      "",
+      "std::thread ${1:t}(${2:function_name});",
+      "${1:t}.join();"
+    ],
+    "description": "Standard thread creation and joining (C++11 and later)"
+  },
+  "ccraft-cpp-std-optional": {
+    "prefix": "ccraft-cpp-std-optional",
+    "body": [
+      "#include <optional>",
+      "",
+      "std::optional<${1:Type}> ${2:opt_var} = ${3:std::nullopt};",
+      "if (${2:opt_var}.has_value()) {",
+      "    ${4:// code when value exists}",
+      "}"
+    ],
+    "description": "std::optional usage (C++17 and later)"
+  },
+  "ccraft-cpp-std-variant": {
+    "prefix": "ccraft-cpp-std-variant",
+    "body": [
+      "#include <variant>",
+      "",
+      "std::variant<${1:Type1}, ${2:Type2}> ${3:var};",
+      "std::visit([](auto&& ${4:arg}) {",
+      "    ${5:// handle variant types here}",
+      "}, ${3:var});"
+    ],
+    "description": "std::variant usage (C++17 and later)"
+  },
+  "ccraft-cpp-enum-class": {
+    "prefix": "ccraft-cpp-enum-class",
+    "body": [
+      "enum class ${1:EnumName} {",
+      "    ${2:Value1},",
+      "    ${3:Value2},",
+      "    ${4:Value3}",
+      "};"
+    ],
+    "description": "Strongly typed enum class"
+  },
+  "ccraft-cpp-static-assert": {
+    "prefix": "ccraft-cpp-static-assert",
+    "body": [
+      "static_assert(${1:condition}, \"${2:error_message}\");"
+    ],
+    "description": "Static assert (C++11 and later)"
+  }
+}

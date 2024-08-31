@@ -1,0 +1,46 @@
+{
+  "name": "c-cpp-codecraft",
+  "displayName": "C/C++ CodeCraft",
+  "description": "C/C++ CodeCraft is a comprehensive collection of C and C++ code snippets designed to enhance productivity and simplify the development process.",
+  "version": "0.0.1",
+  "publisher": "sitharaj",
+  "engines": {
+    "vscode": "^1.92.0"
+  },
+  "categories": [
+    "Snippets"
+  ],
+  "icon": "logo/logo.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sitharaj88/codecraft-cpp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sitharaj88/codecraft-cpp/issues"
+  },
+  "homepage": "https://github.com/sitharaj88/codecraft-cpp#readme",
+  "contributes": {
+    "snippets": [
+      {
+        "language": "cpp",
+        "path": "./snippets/snippets.code-snippets"
+      },
+      {
+        "language": "c",
+        "path": "./snippets/snippets.code-snippets"
+      }
+    ]
+  },
+  "author": {
+    "name": "Sitharaj Seenivasan",
+    "url": "https://www.linkedin.com/in/sitharaj88"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "c",
+    "cpp",
+    "snippets",
+    "c++ snippets",
+    "vscode"
+  ]
+}
